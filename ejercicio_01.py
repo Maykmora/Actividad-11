@@ -1,4 +1,6 @@
 print("Bienvenido al programa")
+propietarios={}
+info_vehiculo={}
 p=int(input("Ingrese la cantidad de propietarios que desea agregar: "))
 for i in range(p):
     print(f"Propietario No.{i+1}")
@@ -13,3 +15,16 @@ for i in range(p):
         year=int(input("Ingrese el modelo del vehículo: "))
         estado=input("Ingrese el estado del impuesto (sí-no): ")
 
+    propietarios["nit"]={
+        "nombre":name,
+        "teléfono":phone,
+        "Vehículos":[
+            {
+                "placa":placa,
+                "marca":marca,
+                "modelo":year,
+                "impuesto_pagado":estado
+        }],
+    }
+
+print(propietarios)
