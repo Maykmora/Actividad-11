@@ -25,17 +25,17 @@ for i in range(p):
     propietarios[nit]={
         "nombre":name,
         "teléfono":phone,
-        "Vehículos":[info_vehiculo]
+        "vehículos":info_vehiculo
     }
 print("\n--LISTADO DE PRODUCTOS--")
 contador1=1
 for nit,datos in propietarios.items():
     contador2 = 1
-    print(f"Propietario No.{contador1}")
+    print(f"\nPropietario No.{contador1}")
     print(f"NIT: {nit}")
     print(f"Nombre:{datos["nombre"]}")
     print(f"Teléfono:{datos["teléfono"]}")
-    for placa,infor in info_vehiculo.items():
+    for placa,infor in datos["vehículos"].items():
         print(f"\nVehículo No.{contador2}")
         print(f"Placa: {placa}")
         print(f"Marca: {infor["marca"]}")
@@ -45,6 +45,7 @@ for nit,datos in propietarios.items():
         contador2+=1
     contador1+=1
 
+search=input("Ingrese el número de dpi para buscar la información:")
 
 
 
