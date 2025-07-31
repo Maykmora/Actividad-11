@@ -27,7 +27,7 @@ for i in range(p):
         "teléfono":phone,
         "vehículos":info_vehiculo
     }
-print("\n--LISTADO DE PRODUCTOS--")
+print("\n--LISTADO DE VEHÍCULOS--")
 contador1=1
 for nit,datos in propietarios.items():
     contador2 = 1
@@ -45,7 +45,7 @@ for nit,datos in propietarios.items():
         contador2+=1
     contador1+=1
 
-search=input("\nIngrese el número de NIT para buscar la información:")
+search=int(input(("\nIngrese el número de NIT para buscar la información:")))
 if search in propietarios:
     print(f"Nombre: {propietarios[search]["nombre"]}")
     print(f"Teléfono: {propietarios[search]["teléfono"]}")
@@ -72,6 +72,7 @@ for datos in propietarios.values():
         else:
             no_pago+=1
 
+print("\n--TOTAL IMPUESTOS--")
 print(f"En total hay {si_pago} vehículos con impuestos pagados")
 print(f"En total hay {no_pago} vehículos que no han pagado impuestos")
 
