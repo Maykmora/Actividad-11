@@ -14,6 +14,11 @@ for i in range(p):
         marca=input("Ingrese la marca del vehiculo: ")
         year=int(input("Ingrese el modelo del vehículo: "))
         estado=input("Ingrese el estado del impuesto (sí-no): ")
+        info_vehiculo["placa"]={
+            "marca":marca,
+            "modelo":year,
+            "estado":estado
+        }
 
     propietarios["nit"]={
         "nombre":name,
