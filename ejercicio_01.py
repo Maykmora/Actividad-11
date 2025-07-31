@@ -66,7 +66,7 @@ si_pago=0
 no_pago=0
 for datos in propietarios.values():
     for info in datos["vehículos"].values():
-        if info["estado"].lowe()=="sí":
+        if info["estado"].lower()=="sí":
             si_pago+=1
         else:
             no_pago+=1
