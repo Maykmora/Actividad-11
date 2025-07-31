@@ -1,6 +1,5 @@
 print("Bienvenido al programa")
 propietarios={}
-info_vehiculo={}
 p=int(input("Ingrese la cantidad de propietarios que desea agregar: "))
 for i in range(p):
     print(f"Propietario No.{i+1}")
@@ -8,6 +7,7 @@ for i in range(p):
     name=input("Ingrese el nombre del propietario: ")
     phone=int(input("Ingrese el numero de teléfono del propietario:"))
     cantidad=int(input("Ingrese la cantidad de vehículos que posee: "))
+    info_vehiculo = {}
     for j in range(cantidad):
         print(f"\nVehículo No.{j+1}:")
         placa=input("Ingrese el número de placa del vehículo: ")
@@ -43,6 +43,7 @@ for nit,datos in propietarios.items():
         print(f"Año:{infor["año"]}")
         print(f"Estado:{infor["estado"]}")
         contador2+=1
+    contador1+=1
 
 
 
