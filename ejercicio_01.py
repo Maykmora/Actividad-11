@@ -45,7 +45,32 @@ for nit,datos in propietarios.items():
         contador2+=1
     contador1+=1
 
-search=input("Ingrese el número de dpi para buscar la información:")
+search=input("\nIngrese el número de NIT para buscar la información:")
+if search in propietarios:
+    print(f"Nombre: {propietarios[search]["nombre"]}")
+    print(f"Teléfono: {propietarios[search]["teléfono"]}")
+    print("--Vehículos--")
+    contador3=1
+    for placa,infor in propietarios[search]["vehículos"].items():
+        print(f"\nVehículo No.{contador3}")
+        print(f"Placa: {placa}")
+        print(f"Marca: {infor["marca"]}")
+        print(f"Modelo:{infor["modelo"]}")
+        print(f"Año:{infor["año"]}")
+        print(f"Estado:{infor["estado"]}")
+else:
+    print("Usuario no encontrado.")
+
+
+si_pago=0
+no_pago=0
+for datos in propietarios.values():
+    for info in datos["vehículos"].values():
+        if info["estado"].lowe()=="sí":
+            si_pago+=1
+        else:
+            no_pago+=1
+
 
 
 
