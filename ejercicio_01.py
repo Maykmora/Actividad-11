@@ -58,6 +58,7 @@ if search in propietarios:
         print(f"Modelo:{infor["modelo"]}")
         print(f"Año:{infor["año"]}")
         print(f"Estado:{infor["estado"]}")
+        contador3+=1
 else:
     print("Usuario no encontrado.")
 
@@ -70,6 +71,9 @@ for datos in propietarios.values():
             si_pago+=1
         else:
             no_pago+=1
+
+print(f"En total hay {si_pago} vehículos con impuestos pagados")
+print(f"En total hay {no_pago} vehículos que no han pagado impuestos")
 
 
 
